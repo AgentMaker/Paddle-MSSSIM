@@ -1,7 +1,7 @@
 # Paddle MS-SSIM
 
 ## Introduction
-* Fast and differentiable MS-SSIM and SSIM for Paddle (This repo is based on [Pytorch MS-SSIM](https://github.com/VainF/pytorch-msssim) developed by [@VainF](https://github.com/VainF)).
+* Fast and differentiable MS-SSIM and SSIM for Paddle.
 
     <img src="./images/lcs.png" width="25%">
 
@@ -186,3 +186,8 @@
 * [Pytorch Code](https://github.com/VainF/pytorch-msssim) 
 
 * [TensorFlow Code](https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/ops/image_ops_impl.py#L3314-L3438) 
+
+## Thanks
+* This repo is based on [Pytorch MS-SSIM](https://github.com/VainF/pytorch-msssim) developed by [@VainF](https://github.com/VainF).
+
+* Thanks to this project and its developers.
