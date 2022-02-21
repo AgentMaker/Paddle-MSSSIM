@@ -149,7 +149,7 @@
         $ cd ./examples/as_loss
         ```
     
-    * run the example script 'as_loss.py'
+    * run the example script as_loss.py
 
         ```bash
         $ python as_loss.py
@@ -176,7 +176,7 @@
         |:-:|:-:|
         |![](./examples/as_loss/einstein.png) |![](./examples/as_loss/results.png)|
 
-    * See ['examples/as_loss/as_loss.py'](./examples/as_loss/as_loss.py) for more details
+    * See [examples/as_loss/as_loss.py](./examples/as_loss/as_loss.py) for more details
 
 ## References
  
@@ -193,4 +193,4 @@
 ## Thanks
 * This repo is based on [Pytorch MS-SSIM](https://github.com/VainF/pytorch-msssim) developed by [@VainF](https://github.com/VainF).
 
-* Thanks to this project and its developers.
+* Thanks to the above projects and their developers.
