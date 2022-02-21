@@ -94,6 +94,15 @@
 
     * See ['tests/tests_loss.py'](./tests/tests_loss.py) for more details
 
+## Example
+* Image comparison
+
+    |Image|SSIM|
+    |:-:|:-:|
+    |![](./images/simga_0_ssim_1.0000.png)| 1.0000|
+    |![](./images/simga_50_ssim_0.4225.png)| 0.4225|
+    |![](./images/simga_100_ssim_0.1924.png)| 0.1924|
+
 ## References
  
 * [SSIM Research](https://ece.uwaterloo.ca/~z70wang/research/ssim/) 
