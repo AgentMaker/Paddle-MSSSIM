@@ -300,7 +300,7 @@ class MS_SSIM(nn.Layer):
 
         super(MS_SSIM, self).__init__()
         self.win_size = win_size
-        self.win = _fspecial_gauss_1d(win_size, win_sigma).repeat([channel, 1] + [1] * spatial_dims)
+        self.win = _fspecial_gauss_1d(win_size, win_sigma).tile([channel, 1] + [1] * spatial_dims)
         self.size_average = size_average
         self.data_range = data_range
         self.weights = weights
