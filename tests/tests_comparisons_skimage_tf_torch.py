@@ -18,7 +18,7 @@ import pytorch_msssim
 if __name__ == '__main__':
     img = Image.open('kodim10.png')
     img = np.array(img).astype(np.float32)
-    N_repeat = 100
+    N_repeat = 10
 
     ##########
     #   SSIM

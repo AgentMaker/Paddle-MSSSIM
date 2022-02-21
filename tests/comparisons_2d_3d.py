@@ -1,5 +1,4 @@
 import numpy as np
-import urllib
 import time
 from PIL import Image
 import os
@@ -22,7 +21,7 @@ if __name__ == "__main__":
     img_batch_3d = []
     img_noise_batch_3d = []
     single_image_ssim_3d = []
-    N_repeat = 1
+    N_repeat = 10
     print("====> Single Image")
     print("Repeat %d times" % (N_repeat))
     # params = paddle.nn.Parameter( paddle.ones(img.shape[2], img.shape[0], img.shape[1]), requires_grad=True ) # C, H, W
