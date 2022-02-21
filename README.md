@@ -29,6 +29,9 @@
 
     $ python setup.py install
     ```
+## Requirement
+
+* paddlepaddle / paddlepaddle-gpu >= 2.0.0
 
 ## Usage
 
