@@ -69,6 +69,31 @@
     ms_ssim_val = ms_ssim( X, Y, data_range=1, size_average=False ) #(N,)
     ```
 
+* Enable nonnegative_ssim
+
+    * For ssim, it is recommended to set `nonnegative_ssim=True` to avoid negative results. However, this option is set to `False` by default to keep it consistent with tensorflow and skimage.
+
+    * For ms-ssim, there is no nonnegative_ssim option and the ssim reponses is forced to be non-negative to avoid NaN results.
+
+## Tests
+* Switch to the tests dir
+
+    ```bash
+    $ cd tests
+    ```
+
+* Benchmark
+
+    ```bash 
+    $ python tests_comparisons_skimage.py
+
+    $ python tests_comparisons_2d3d.py
+    ```
+
+* As Loss function
+
+    * See ['tests/tests_loss.py'](./tests/tests_loss.py) for more details
+
 ## References
  
 * [SSIM Research](https://ece.uwaterloo.ca/~z70wang/research/ssim/)  
