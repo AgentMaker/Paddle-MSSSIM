@@ -75,7 +75,7 @@
 
     * For ms-ssim, there is no nonnegative_ssim option and the ssim reponses is forced to be non-negative to avoid NaN results.
 
-## Tests
+## Test
 * Switch to the tests dir
 
     ```bash
@@ -96,8 +96,12 @@
 
 ## References
  
-* [SSIM Research](https://ece.uwaterloo.ca/~z70wang/research/ssim/)  
+* [SSIM Research](https://ece.uwaterloo.ca/~z70wang/research/ssim/) 
+
 * [MS-SSIM Paper](https://ece.uwaterloo.ca/~z70wang/publications/msssim.pdf)  
+
 * [Matlab Code](https://ece.uwaterloo.ca/~z70wang/research/iwssim/)   
+
 * [Pytorch Code](https://github.com/VainF/pytorch-msssim) 
+
 * [TensorFlow Code](https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/ops/image_ops_impl.py#L3314-L3438) 
