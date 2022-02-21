@@ -193,4 +193,4 @@
 ## Thanks
 * This repo is based on [Pytorch MS-SSIM](https://github.com/VainF/pytorch-msssim) developed by [@VainF](https://github.com/VainF).
 
-* Thanks to the above projects and their developers.
+* Thanks to the above project and its developers.
