@@ -1,7 +1,7 @@
-# Paddle-MSSSIM
+# Paddle MS-SSIM
 
 ## Introduction
-* Fast and differentiable MS-SSIM and SSIM for Paddle (This repo is based on [Pytorch MS-SSIM](https://github.com/VainF/pytorch-msssim) developed by @VainF).
+* Fast and differentiable MS-SSIM and SSIM for Paddle (This repo is based on [Pytorch MS-SSIM](https://github.com/VainF/pytorch-msssim) developed by [@VainF](https://github.com/VainF)).
 
     <img src="./images/lcs.png" width="25%">
 
