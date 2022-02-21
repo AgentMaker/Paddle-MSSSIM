@@ -140,15 +140,15 @@
     |![](./images/simga_50_ssim_0.4225.png)| 0.4225|
     |![](./images/simga_100_ssim_0.1924.png)| 0.1924|
 
-* As Loss function
+* As a loss function
 
-    * switch to the examples/loss dir
+    * switch to the examples/as_loss dir
 
         ```bash
-        $ cd ./examples/loss
+        $ cd ./examples/as_loss
         ```
     
-    * run the example script 'loss.py'
+    * run the example script 'as_loss.py'
 
         ```bash
         $ python as_loss.py
@@ -160,81 +160,7 @@
             step: 3 ssim_loss: 0.994021
             step: 4 ssim_loss: 0.994106
             step: 5 ssim_loss: 0.994190
-            step: 6 ssim_loss: 0.994275
-            step: 7 ssim_loss: 0.994359
-            step: 8 ssim_loss: 0.994444
-            step: 9 ssim_loss: 0.994523
-            step: 10 ssim_loss: 0.994608
-            step: 11 ssim_loss: 0.994694
-            step: 12 ssim_loss: 0.994773
-            step: 13 ssim_loss: 0.994858
-            step: 14 ssim_loss: 0.994941
-            step: 15 ssim_loss: 0.995025
-            step: 16 ssim_loss: 0.995108
-            step: 17 ssim_loss: 0.995195
-            step: 18 ssim_loss: 0.995282
-            step: 19 ssim_loss: 0.995367
-            step: 20 ssim_loss: 0.995460
-            step: 21 ssim_loss: 0.995549
-            step: 22 ssim_loss: 0.995642
-            step: 23 ssim_loss: 0.995733
-            step: 24 ssim_loss: 0.995823
-            step: 25 ssim_loss: 0.995911
-            step: 26 ssim_loss: 0.996002
-            step: 27 ssim_loss: 0.996094
-            step: 28 ssim_loss: 0.996181
-            step: 29 ssim_loss: 0.996269
-            step: 30 ssim_loss: 0.996359
-            step: 31 ssim_loss: 0.996446
-            step: 32 ssim_loss: 0.996535
-            step: 33 ssim_loss: 0.996622
-            step: 34 ssim_loss: 0.996702
-            step: 35 ssim_loss: 0.996781
-            step: 36 ssim_loss: 0.996863
-            step: 37 ssim_loss: 0.996943
-            step: 38 ssim_loss: 0.997022
-            step: 39 ssim_loss: 0.997102
-            step: 40 ssim_loss: 0.997177
-            step: 41 ssim_loss: 0.997256
-            step: 42 ssim_loss: 0.997331
-            step: 43 ssim_loss: 0.997409
-            step: 44 ssim_loss: 0.997486
-            step: 45 ssim_loss: 0.997562
-            step: 46 ssim_loss: 0.997638
-            step: 47 ssim_loss: 0.997710
-            step: 48 ssim_loss: 0.997785
-            step: 49 ssim_loss: 0.997856
-            step: 50 ssim_loss: 0.997929
-            step: 51 ssim_loss: 0.997997
-            step: 52 ssim_loss: 0.998072
-            step: 53 ssim_loss: 0.998147
-            step: 54 ssim_loss: 0.998221
-            step: 55 ssim_loss: 0.998292
-            step: 56 ssim_loss: 0.998368
-            step: 57 ssim_loss: 0.998442
-            step: 58 ssim_loss: 0.998522
-            step: 59 ssim_loss: 0.998600
-            step: 60 ssim_loss: 0.998672
-            step: 61 ssim_loss: 0.998736
-            step: 62 ssim_loss: 0.998810
-            step: 63 ssim_loss: 0.998887
-            step: 64 ssim_loss: 0.998959
-            step: 65 ssim_loss: 0.999027
-            step: 66 ssim_loss: 0.999092
-            step: 67 ssim_loss: 0.999149
-            step: 68 ssim_loss: 0.999211
-            step: 69 ssim_loss: 0.999266
-            step: 70 ssim_loss: 0.999317
-            step: 71 ssim_loss: 0.999368
-            step: 72 ssim_loss: 0.999413
-            step: 73 ssim_loss: 0.999459
-            step: 74 ssim_loss: 0.999507
-            step: 75 ssim_loss: 0.999555
-            step: 76 ssim_loss: 0.999588
-            step: 77 ssim_loss: 0.999623
-            step: 78 ssim_loss: 0.999654
-            step: 79 ssim_loss: 0.999683
-            step: 80 ssim_loss: 0.999732
+            ...
             step: 81 ssim_loss: 0.999762
             step: 82 ssim_loss: 0.999785
             step: 83 ssim_loss: 0.999862
@@ -243,7 +169,7 @@
             step: 86 ssim_loss: 0.999892
             step: 87 ssim_loss: 0.999912
 
-    * See ['examples/loss/loss.py'](./examples/loss/loss.py) for more details
+    * See ['examples/as_loss/as_loss.py'](./examples/as_loss/as_loss.py) for more details
 
 ## References
  
