@@ -182,7 +182,7 @@ def ms_ssim(
         X = X.squeeze(axis=d)
         Y = Y.squeeze(axis=d)
 
-    if not X.type() == Y.type():
+    if not X.type == Y.type:
         raise ValueError("Input images should have the same dtype.")
 
     if len(X.shape) == 4:
@@ -205,11 +205,11 @@ def ms_ssim(
 
     if weights is None:
         weights = [0.0448, 0.2856, 0.3001, 0.2363, 0.1333]
-    weights = paddle.to_tensor(weights, device=X.device, dtype=X.dtype)
+    weights = paddle.to_tensor(weights, dtype=X.dtype)
 
     if win is None:
         win = _fspecial_gauss_1d(win_size, win_sigma)
-        win = win.repeat([X.shape[1]] + [1] * (len(X.shape) - 1))
+        win = win.tile([X.shape[1]] + [1] * (len(X.shape) - 1))
 
     levels = weights.shape[0]
     mcs = []
@@ -223,8 +223,8 @@ def ms_ssim(
             Y = avg_pool(Y, kernel_size=2, padding=padding)
 
     ssim_per_channel = F.relu(ssim_per_channel)  # (batch, channel)
-    mcs_and_ssim = padding.stack(mcs + [ssim_per_channel], axis=0)  # (level, batch, channel)
-    ms_ssim_val = padding.prod(mcs_and_ssim ** weights.view(-1, 1, 1), axis=0)
+    mcs_and_ssim = paddle.stack(mcs + [ssim_per_channel], axis=0)  # (level, batch, channel)
+    ms_ssim_val = paddle.prod(mcs_and_ssim ** weights.reshape((-1, 1, 1)), axis=0)
 
     if size_average:
         return ms_ssim_val.mean()
