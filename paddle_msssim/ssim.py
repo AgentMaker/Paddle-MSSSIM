@@ -1,5 +1,3 @@
-# Copyright 2020 by Gongfan Fang, Zhejiang University.
-# All rights reserved.
 import warnings
 
 import paddle
@@ -14,7 +12,7 @@ def _fspecial_gauss_1d(size, sigma):
         sigma (float): sigma of normal distribution
 
     Returns:
-        torch.Tensor: 1D kernel (1 x 1 x size)
+        paddle.Tensor: 1D kernel (1 x 1 x size)
     """
     coords = paddle.arange(size, dtype=paddle.float32)
     coords -= size // 2
@@ -28,11 +26,11 @@ def _fspecial_gauss_1d(size, sigma):
 def gaussian_filter(input, win):
     r""" Blur input with 1-D kernel
     Args:
-        input (torch.Tensor): a batch of tensors to be blurred
-        window (torch.Tensor): 1-D gauss kernel
+        input (paddle.Tensor): a batch of tensors to be blurred
+        window (paddle.Tensor): 1-D gauss kernel
 
     Returns:
-        torch.Tensor: blurred tensors
+        paddle.Tensor: blurred tensors
     """
     assert all([ws == 1 for ws in win.shape[1:-1]]), win.shape
     if len(input.shape) == 4:
@@ -63,14 +61,14 @@ def _ssim(X, Y, data_range, win, size_average=True, K=(0.01, 0.03)):
     r""" Calculate ssim index for X and Y
 
     Args:
-        X (torch.Tensor): images
-        Y (torch.Tensor): images
-        win (torch.Tensor): 1-D gauss kernel
+        X (paddle.Tensor): images
+        Y (paddle.Tensor): images
+        win (paddle.Tensor): 1-D gauss kernel
         data_range (float or int, optional): value range of input images. (usually 1.0 or 255)
         size_average (bool, optional): if size_average=True, ssim of all images will be averaged as a scalar
 
     Returns:
-        torch.Tensor: ssim results.
+        paddle.Tensor: ssim results.
     """
     K1, K2 = K
     # batch, channel, [depth,] height, width = X.shape
@@ -113,18 +111,18 @@ def ssim(
 ):
     r""" interface of ssim
     Args:
-        X (torch.Tensor): a batch of images, (N,C,H,W)
-        Y (torch.Tensor): a batch of images, (N,C,H,W)
+        X (paddle.Tensor): a batch of images, (N,C,H,W)
+        Y (paddle.Tensor): a batch of images, (N,C,H,W)
         data_range (float or int, optional): value range of input images. (usually 1.0 or 255)
         size_average (bool, optional): if size_average=True, ssim of all images will be averaged as a scalar
         win_size: (int, optional): the size of gauss kernel
         win_sigma: (float, optional): sigma of normal distribution
-        win (torch.Tensor, optional): 1-D gauss kernel. if None, a new kernel will be created according to win_size and win_sigma
+        win (paddle.Tensor, optional): 1-D gauss kernel. if None, a new kernel will be created according to win_size and win_sigma
         K (list or tuple, optional): scalar constants (K1, K2). Try a larger K2 constant (e.g. 0.4) if you get a negative or NaN results.
         nonnegative_ssim (bool, optional): force the ssim response to be nonnegative with relu
 
     Returns:
-        torch.Tensor: ssim results
+        paddle.Tensor: ssim results
     """
     if not X.shape == Y.shape:
         raise ValueError("Input images should have the same dimensions.")
@@ -165,17 +163,17 @@ def ms_ssim(
 
     r""" interface of ms-ssim
     Args:
-        X (torch.Tensor): a batch of images, (N,C,[T,]H,W)
-        Y (torch.Tensor): a batch of images, (N,C,[T,]H,W)
+        X (paddle.Tensor): a batch of images, (N,C,[T,]H,W)
+        Y (paddle.Tensor): a batch of images, (N,C,[T,]H,W)
         data_range (float or int, optional): value range of input images. (usually 1.0 or 255)
         size_average (bool, optional): if size_average=True, ssim of all images will be averaged as a scalar
         win_size: (int, optional): the size of gauss kernel
         win_sigma: (float, optional): sigma of normal distribution
-        win (torch.Tensor, optional): 1-D gauss kernel. if None, a new kernel will be created according to win_size and win_sigma
+        win (paddle.Tensor, optional): 1-D gauss kernel. if None, a new kernel will be created according to win_size and win_sigma
         weights (list, optional): weights for different levels
         K (list or tuple, optional): scalar constants (K1, K2). Try a larger K2 constant (e.g. 0.4) if you get a negative or NaN results.
     Returns:
-        torch.Tensor: ms-ssim results
+        paddle.Tensor: ms-ssim results
     """
     if not X.shape == Y.shape:
         raise ValueError("Input images should have the same dimensions.")

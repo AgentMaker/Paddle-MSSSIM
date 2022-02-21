@@ -1,5 +1,3 @@
-# Adapted from https://github.com/Po-Hsun-Su/pytorch-ssim/blob/master/max_ssim.py
-
 import paddle
 from paddle.optimizer import Adam
 from PIL import Image
