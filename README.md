@@ -85,7 +85,7 @@
 * Benchmark
 
     ```bash 
-    $ python tests_comparisons_skimage_tf_torch.py
+    $ python comparisons_skimage_tf_torch.py
     ```
 
         outputs(AMD Ryzen 4600H): 
@@ -131,11 +131,6 @@
         ====> Batch
         Pass
 
-
-* As Loss function
-
-    * See ['tests/tests_loss.py'](./tests/tests_loss.py) for more details
-
 ## Example
 * Image comparison
 
@@ -144,6 +139,10 @@
     |![](./images/simga_0_ssim_1.0000.png)| 1.0000|
     |![](./images/simga_50_ssim_0.4225.png)| 0.4225|
     |![](./images/simga_100_ssim_0.1924.png)| 0.1924|
+
+* As Loss function
+
+    * See ['examples/loss/loss.py'](./examples/loss/loss.py) for more details
 
 ## References
  
