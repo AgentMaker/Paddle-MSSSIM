@@ -68,3 +68,11 @@
     Y = (Y + 1) / 2  
     ms_ssim_val = ms_ssim( X, Y, data_range=1, size_average=False ) #(N,)
     ```
+
+## References
+ 
+* [SSIM Research](https://ece.uwaterloo.ca/~z70wang/research/ssim/)  
+* [MS-SSIM Paper](https://ece.uwaterloo.ca/~z70wang/publications/msssim.pdf)  
+* [Matlab Code](https://ece.uwaterloo.ca/~z70wang/research/iwssim/)   
+* [Pytorch Code](https://github.com/VainF/pytorch-msssim) 
+* [TensorFlow Code](https://github.com/tensorflow/tensorflow/blob/v2.1.0/tensorflow/python/ops/image_ops_impl.py#L3314-L3438) 
