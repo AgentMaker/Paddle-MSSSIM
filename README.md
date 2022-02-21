@@ -134,11 +134,9 @@
 ## Example
 * Image comparison
 
-    |Image|SSIM|
-    |:-:|:-:|
-    |![](./images/simga_0_ssim_1.0000.png)| 1.0000|
-    |![](./images/simga_50_ssim_0.4225.png)| 0.4225|
-    |![](./images/simga_100_ssim_0.1924.png)| 0.1924|
+    |SSIM = 1.0000|SSIM = 0.4225|SSIM = 0.1924|
+    |:-:|:-:|:-:|
+    |![](./images/simga_0_ssim_1.0000.png) |![](./images/simga_50_ssim_0.4225.png)|![](./images/simga_100_ssim_0.1924.png)|
 
 * As a loss function
 
@@ -168,6 +166,12 @@
             step: 85 ssim_loss: 0.999884
             step: 86 ssim_loss: 0.999892
             step: 87 ssim_loss: 0.999912
+
+    * result
+
+        |Input|Output|
+        |:-:|:-:|
+        |![](./examples/as_loss/einstein.png) |![](./examples/as_loss/results.png)|
 
     * See ['examples/as_loss/as_loss.py'](./examples/as_loss/as_loss.py) for more details
 
