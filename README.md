@@ -178,6 +178,10 @@
 
     * See [examples/as_loss/as_loss.py](./examples/as_loss/as_loss.py) for more details
 
+* Auto Encoder
+
+    * See [examples/auto_encoder](./examples/auto_encoder) for more details
+
 ## References
  
 * [SSIM Research](https://ece.uwaterloo.ca/~z70wang/research/ssim/) 
