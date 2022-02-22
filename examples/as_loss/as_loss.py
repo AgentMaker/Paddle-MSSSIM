@@ -1,11 +1,13 @@
+import os
+import sys
 import paddle
-from paddle.optimizer import Adam
-from PIL import Image
 import numpy as np
-import sys, os
-import paddle.nn.functional as F
+
+from PIL import Image
+from paddle.optimizer import Adam
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), '..'))
 from paddle_msssim import ssim, ms_ssim, SSIM, MS_SSIM
+
 
 loss_type = 'msssim'
 assert loss_type in ['ssim', 'msssim']
