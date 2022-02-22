@@ -56,7 +56,7 @@ def gaussian_filter(input, win):
     return out
 
 
-def _ssim(X, Y, data_range, win, size_average=True, K=(0.01, 0.03)):
+def _ssim(X, Y, data_range, win, K=(0.01, 0.03)):
 
     r""" Calculate ssim index for X and Y
 
@@ -65,7 +65,6 @@ def _ssim(X, Y, data_range, win, size_average=True, K=(0.01, 0.03)):
         Y (paddle.Tensor): images
         win (paddle.Tensor): 1-D gauss kernel
         data_range (float or int, optional): value range of input images. (usually 1.0 or 255)
-        size_average (bool, optional): if size_average=True, ssim of all images will be averaged as a scalar
 
     Returns:
         paddle.Tensor: ssim results.
@@ -147,7 +146,7 @@ def ssim(
         win = _fspecial_gauss_1d(win_size, win_sigma)
         win = win.tile([X.shape[1]] + [1] * (len(X.shape) - 1))
 
-    ssim_per_channel, cs = _ssim(X, Y, data_range=data_range, win=win, size_average=False, K=K)
+    ssim_per_channel, _ = _ssim(X, Y, data_range=data_range, win=win, K=K)
     if nonnegative_ssim:
         ssim_per_channel = F.relu(ssim_per_channel)
 
@@ -158,7 +157,15 @@ def ssim(
 
 
 def ms_ssim(
-    X, Y, data_range=255, size_average=True, win_size=11, win_sigma=1.5, win=None, weights=None, K=(0.01, 0.03)
+    X,
+    Y,
+    data_range=255,
+    size_average=True,
+    win_size=11,
+    win_sigma=1.5,
+    win=None,
+    weights=None,
+    K=(0.01, 0.03)
 ):
 
     r""" interface of ms-ssim
@@ -214,7 +221,7 @@ def ms_ssim(
     levels = weights.shape[0]
     mcs = []
     for i in range(levels):
-        ssim_per_channel, cs = _ssim(X, Y, win=win, data_range=data_range, size_average=False, K=K)
+        ssim_per_channel, cs = _ssim(X, Y, win=win, data_range=data_range, K=K)
 
         if i < levels - 1:
             mcs.append(F.relu(cs))
