@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="paddle_msssim",
-    version="0.0.1",
+    version="0.0.2",
     author="jm12138",
     description="Fast and differentiable MS-SSIM and SSIM for paddle.",
     long_description=long_description,
