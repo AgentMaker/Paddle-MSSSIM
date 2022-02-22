@@ -186,6 +186,8 @@
  
 * [SSIM Research](https://ece.uwaterloo.ca/~z70wang/research/ssim/) 
 
+* [SSIM Paper](https://ece.uwaterloo.ca/~z70wang/publications/ssim.pdf)
+
 * [MS-SSIM Paper](https://ece.uwaterloo.ca/~z70wang/publications/msssim.pdf)  
 
 * [Matlab Code](https://ece.uwaterloo.ca/~z70wang/research/iwssim/)   
