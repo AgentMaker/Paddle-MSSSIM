@@ -57,7 +57,6 @@ def gaussian_filter(input, win):
 
 
 def _ssim(X, Y, data_range, win, K=(0.01, 0.03)):
-
     r""" Calculate ssim index for X and Y
 
     Args:
@@ -167,7 +166,6 @@ def ms_ssim(
     weights=None,
     K=(0.01, 0.03)
 ):
-
     r""" interface of ms-ssim
     Args:
         X (paddle.Tensor): a batch of images, (N,C,[T,]H,W)
@@ -230,7 +228,7 @@ def ms_ssim(
             Y = avg_pool(Y, kernel_size=2, padding=padding)
 
     ssim_per_channel = F.relu(ssim_per_channel)  # (batch, channel)
-    mcs_and_ssim = paddle.stack(mcs + [ssim_per_channel], axis=0)  # (level, batch, channel)
+    mcs_and_ssim = paddle.stack(mcs + [ssim_per_channel], axis=0) # (level, batch, channel)
     ms_ssim_val = paddle.prod(mcs_and_ssim ** weights.reshape((-1, 1, 1)), axis=0)
 
     if size_average:
